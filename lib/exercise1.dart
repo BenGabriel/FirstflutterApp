@@ -42,10 +42,14 @@ class _MyAppState extends State<MyApp> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      number == 2 ? number = 0 : number = number + 1;
+                      if (number == 2) {
+                        number = 0;
+                      } else {
+                        number = number + 1;
+                      }
                     });
                   },
-                  child: Text('My Button'),
+                  child: Text('Hi'),
                   style: ElevatedButton.styleFrom(primary: Colors.grey),
                 )
               ],
