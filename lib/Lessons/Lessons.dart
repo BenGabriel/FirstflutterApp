@@ -13,27 +13,38 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter Coding Excercise'),
-          centerTitle: true,
+          title: Text('MY NEW FLUTTER APP'),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset('assets/images/rielx.jpg'),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('My Button'),
+              ),
+              Container(
+                height: 200,
+                width: 100,
+                color: Colors.indigo,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(50),
+                decoration: BoxDecoration(
+                  color: Colors.pink,
+                ),
+                child: Text('Whatever'),
+              ),
               Image.network(
                   'https://megaport.hu/media/king-include/uploads/2018/12/christmas-karacsony-6-2117999109.jpg'),
-              Image.asset('assets/images/rielx.jpg')
+              Image.asset("assets/images/rielx.jpg")
             ],
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.blue,
           child: IconButton(
             onPressed: () {},
-            icon: Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
+            icon: Icon(Icons.home),
           ),
         ),
       ),
